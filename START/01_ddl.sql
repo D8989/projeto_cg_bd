@@ -54,7 +54,7 @@ create table sistema_controle.produto (
 	atualizado_em timestamptz null,
 	desativado_em timestamptz null,
 	constraint produto_id_pkey primary key(id),
-	constraint produto_nu_m_id_ib_id_q_unq unique (nome_unique, marca_id, item_base_id, quantidade),
+	constraint produto_nu_m_id_ib_id_q_de_unq unique (nome_unique, marca_id, item_base_id, quantidade, desativado_em),
 	constraint produto_m_id_fkey foreign key (marca_id)
 		references sistema_controle.marca (id)
 			on update cascade
