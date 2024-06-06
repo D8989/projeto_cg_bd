@@ -26,7 +26,7 @@ create table sistema_controle.item_base (
     constraint item_base_id_pkey primary key (id),
     constraint item_base_tib_id_tipo_item_base_id_fkey foreign key (tipo_item_base_id)
         references sistema_controle.tipo_item_base (id),
-    constraint item_base_n_unq unique (nome)
+    constraint item_base_n_unq_de unique (nome, desativado_em)
 );
 
 create table sistema_controle.marca (
