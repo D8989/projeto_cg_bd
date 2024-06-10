@@ -10,6 +10,7 @@ create table sistema_controle.loja (
 	cep varchar(20) null,
 	bairro varchar(50) not null,
 	cidade varchar(50) not null,
+	referencia varchar(100) not null default 'n/a',
 	criado_em timestamptz default now(),
 	atualizado_em timestamptz null,
 	desativado_em timestamptz null,
