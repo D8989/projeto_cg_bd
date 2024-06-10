@@ -7,7 +7,7 @@ create table sistema_controle.loja (
 	apelido varchar(100) not null,
 	rua varchar(200) not null,
 	numero varchar(10) not null default 'n/a',
-	cep varchar(20) null,
+	cep varchar(20) not null default '00000000',
 	bairro varchar(50) not null,
 	cidade varchar(50) not null,
 	referencia varchar(100) not null default 'n/a',
