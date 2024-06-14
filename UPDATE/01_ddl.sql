@@ -20,7 +20,8 @@ create table sistema_controle.usuario (
 	id serial,
 	nome varchar(100) not null,
 	nome_unique varchar(100) not null,
-	constraint usuario_id_pkey primary key (id)
+	constraint usuario_id_pkey primary key (id),
+	constraint ususario_n_u_unq unique(nome_unique)
 );
 
 create table sistema_controle.pagamento (
