@@ -47,7 +47,7 @@ create table sistema_controle.item_compra (
 	id serial,
 	produto_id integer not null,
 	compra_id integer not null,
-	quantidade integer not null,
+	quantidade numeric(7,3) not null,
 	custo numeric(6,2) not null,
 	gramatura varchar(10) not null,
 	constraint item_compra_id_pk primary key(id),
@@ -61,7 +61,7 @@ create table sistema_controle.item_compra (
 		on delete no action,
 	constraint item_compra_p_id_c_id_unq unique(produto_id, compra_id),
 	constraint item_compra_quantidade_valid check (quantidade > 0),
-	constraint item_compra_custo_valid check (quantidade > 0)
+	constraint item_compra_custo_valid check (custo > 0)
 );
 
 commit;
