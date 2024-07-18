@@ -64,7 +64,7 @@ create table sistema_controle.produto (
 		references sistema_controle.item_base (id)
 			on update cascade
 			on delete no action,
-	constraint produto_gramatura_valid check (gramatura in('Kg', 'g', 'l', 'ml'))
+	constraint produto_gramatura_valid check (gramatura in('Kg', 'g', 'l', 'ml', 'unid'))
 );
 comment on table sistema_controle.produto is 'PRODUTO de um ITEM-BASE na tal MARCA';
 
