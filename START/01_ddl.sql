@@ -48,7 +48,7 @@ create table sistema_controle.produto (
 	nome varchar(50) not null,
 	nome_unique varchar(50) not null,
 	descricao varchar(250) null,
-	quantidade integer,
+	quantidade numeric(7,3),
 	gramatura varchar(10),
 	criado_em timestamptz default now(),
 	atualizado_em timestamptz null,
